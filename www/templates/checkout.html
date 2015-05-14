@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">结账</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="close()">关闭</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+      <ion-list>
+        <ion-item class="item" ng-repeat="food in detail" type="item-text-wrap">
+          <span>{{food.name}} x{{food.num}}    {{food.cash}}￥</span>
+        </ion-item>
+      </ion-list>
+      <div class="item">
+        <h2>总计：</h2>
+        <p>{{total}}￥</p>
+      </div>
+      <button class="button button-block button-positive" ng-click="doCheckout()">确认</button>
+  </ion-content>
+</ion-modal-view>

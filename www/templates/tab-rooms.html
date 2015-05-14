@@ -1,0 +1,13 @@
+<ion-view view-title="点餐">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" 
+      ng-repeat="room in rooms | filter: getRooms" type="item-text-wrap" href="#/tab/rooms/{{room.id}}">
+        <img ng-src="{{room.face}}">
+        <h2>{{room.name}}</h2>
+        <p>点击进入点餐</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
